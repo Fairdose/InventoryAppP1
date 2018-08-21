@@ -85,20 +85,4 @@ public class MainActivity extends AppCompatActivity {
             cursor.close();
         }
     }
-
-    private void addToInventory(String bName, int bPrice, int bQuantity, String bSupplier, String bContact) {
-        // Gets the database in write mode
-        SQLiteDatabase db = bdbHelper.getWritableDatabase();
-
-        // Create a ContentValues object where column names are the keys,
-        // and Toto's pet attributes are the values.
-        ContentValues values = new ContentValues();
-        values.put(BookEntry.BOOK_NAME, bName);
-        values.put(BookEntry.BOOK_PRICE, bPrice);
-        values.put(BookEntry.BOOK_QUANTITY, bQuantity);
-        values.put(BookEntry.SUPPLIER, bSupplier);
-        values.put(BookEntry.SUPPLIER_CONTACT, bContact);
-
-        long newRowId = db.insert(BookEntry.TABLE_NAME, null, values);
-    }
 }
