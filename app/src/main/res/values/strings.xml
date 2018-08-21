@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Inventory App P1</string>
+    <string name="action_settings">Settings</string>
+    <string name="inventory_element_place_holder">Element placeholder</string>
+    <string name="inventory_item_available_string">Currently we have %1$d book(s).</string>
+    <string name="columns_placeholder">Columns are here</string>
+    <string name="current_element_placeholder">Current Inventory</string>
+</resources>
