@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#1e1e1e</color>
+    <color name="colorPrimaryDark">#101010</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="id_text_color">#646464</color>
+    <color name="def_text_color_dark">#494949</color>
+    <color name="button_back_color">#d77300</color>
+    <color name="inventory_item_background">#2d2d2d</color>
 </resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/edit_item_l_layout">
+
+            <TextView
+                style="@style/edit_item_text"
+                android:text="@string/new_item_name" />
+
+            <EditText
+                android:id="@+id/new_book_name"
+                style="@style/edit_item_edit"
+                android:hint="@string/new_book_name_hint"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/edit_item_l_layout">
+
+            <TextView
+                style="@style/edit_item_text"
+                android:text="@string/new_item_price" />
+
+            <EditText
+                style="@style/edit_item_edit"
+                android:id="@+id/new_book_price"
+                android:inputType="number"
+                android:hint="@string/new_item_price_hint"/>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/edit_item_l_layout">
+
+            <TextView
+                style="@style/edit_item_text"
+                android:text="@string/new_item_how_many" />
+
+            <EditText
+                style="@style/edit_item_edit"
+                android:id="@+id/new_book_quantity"
+                android:inputType="number"
+                android:hint="@string/new_item_how_many_hint" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/edit_item_l_layout">
+
+            <TextView
+                style="@style/edit_item_text"
+                android:text="@string/new_item_supplier" />
+
+            <EditText
+                style="@style/edit_item_edit"
+                android:id="@+id/new_book_supplier"
+                android:inputType="text"
+                android:hint="@string/new_item_supplier_hint" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/edit_item_l_layout">
+
+            <TextView
+                style="@style/edit_item_text"
+                android:text="@string/new_item_contact" />
+
+            <EditText
+                style="@style/edit_item_edit"
+                android:id="@+id/new_book_contact"
+                android:inputType="number"
+                android:hint="@string/new_item_contact_hint" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_bottom_prompt"
+            android:layout_margin="12dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

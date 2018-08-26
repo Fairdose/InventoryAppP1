@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inventory_item_wrapper"
+    style="@style/inventory_item_wrapper">
+
+    <LinearLayout style="@style/inventory_top_item_container">
+
+        <LinearLayout style="@style/inventory_header_wrapper">
+
+            <TextView
+                android:id="@+id/inventory_item_name"
+                style="@style/inventory_item_name"
+                tools:text="book_name" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inventory_item_price"
+            style="@style/inventory_item_price"
+            tools:text="@string/item_price_parsable_string" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/inventory_item_bottom_container">
+
+        <LinearLayout style="@style/inventory_item_supplier">
+
+            <TextView
+                android:id="@+id/inventory_item_supplier_name"
+                style="@style/inventory_item_supplier_name"
+                tools:text="supplier_name" />
+
+            <TextView
+                android:id="@+id/inventory_item_supplier_contact"
+                style="@style/inventory_item_supplier_contact"
+                tools:text="supplier_contact" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/inventory_item_quantity_container">
+
+            <TextView
+                android:id="@+id/inventory_item_quantity_header"
+                style="@style/inventory_item_quantity_text"
+                android:text="@string/quantity_text" />
+
+            <TextView
+                android:id="@+id/inventory_item_quantity"
+                style="@style/inventory_item_quantity"
+                tools:text="15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sell_item_button"
+        style="@style/inventory_app_button_style"
+        android:drawableLeft="@drawable/ic_attach_money"
+        android:drawableStart="@drawable/ic_attach_money"
+        android:text="@string/sell_item" />
+
+</LinearLayout>

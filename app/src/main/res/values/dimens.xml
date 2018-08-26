@@ -2,4 +2,10 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_view_margin_v">16dp</dimen>
     <dimen name="text_view_margin_h">8dp</dimen>
+    <dimen name="item_text_wrapper_layout_padding_h">16dp</dimen>
+    <dimen name="item_text_wrapper_layout_padding_v">8dp</dimen>
+    <dimen name="inventory_item_head_text_size">24sp</dimen>
+    <dimen name="edit_item_layout_padding_h">12dp</dimen>
+    <dimen name="edit_item_layout_padding_v">8dp</dimen>
+    <dimen name="details_info_layout">4dp</dimen>
 </resources>

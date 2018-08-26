@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    style="@style/detail_layout_h_constraint_style">
+
+
+    <TextView
+        android:id="@+id/details_book_id_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_id_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/details_book_id_value"
+        style="@style/details_layout_value_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_id_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#152544" />
+
+
+    <TextView
+        android:id="@+id/details_book_name_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_name_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_id_text" />
+
+    <TextView
+        android:id="@+id/details_book_name_value"
+        style="@style/details_layout_value_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_name_text"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_id_value"
+        tools:text="Don Quijote" />
+
+
+    <TextView
+        android:id="@+id/details_book_price_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_price_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_name_text" />
+
+    <TextView
+        android:id="@+id/details_book_price_value"
+        style="@style/details_layout_value_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_price_text"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_name_value"
+        tools:text="48 $" />
+
+
+    <TextView
+        android:id="@+id/details_book_quantity_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_stock_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_price_text" />
+
+    <TextView
+        android:id="@+id/details_book_quantity_value"
+        style="@style/details_layout_key_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_quantity_text"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_price_value"
+        tools:text="246" />
+
+
+    <TextView
+        android:id="@+id/details_book_seller_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_supplier_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_quantity_text" />
+
+    <TextView
+        android:id="@+id/details_book_seller_value"
+        style="@style/details_layout_value_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_seller_text"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_quantity_value"
+        tools:text="Bookies" />
+
+
+    <TextView
+        android:id="@+id/details_book_contact_text"
+        style="@style/details_layout_key_h"
+        android:text="@string/details_book_contact_string"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_seller_text" />
+
+    <TextView
+        android:id="@+id/details_book_contact_value"
+        style="@style/details_layout_value_h"
+        app:layout_constraintStart_toEndOf="@+id/details_book_contact_text"
+        app:layout_constraintTop_toBottomOf="@+id/details_book_seller_value"
+        tools:text="555 55 65" />
+
+    <Button
+        android:id="@+id/details_button_2"
+        android:text="@string/detail_button_text_add"
+        app:layout_constraintBottom_toTopOf="@+id/details_button_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/detail_layout_add_button_h" />
+
+
+    <Button
+        android:id="@+id/details_button_1"
+        android:text="@string/detail_button_text_sell"
+        app:layout_constraintBottom_toTopOf="@+id/details_button_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/details_button_2"
+        style="@style/detail_layout_sell_button_h" />
+
+
+    <Button
+        android:id="@+id/details_button_3"
+        style="@style/details_layout_call_button_h"
+        android:text="@string/details_button_3"
+        app:layout_constraintBottom_toTopOf="@+id/edit_item_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/details_button_1" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_item_fab"
+        style="@style/details_layout_fab_style_h"
+        app:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_mode_edit" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="426dp"
+        style="@style/button_guide" />
+
+</android.support.constraint.ConstraintLayout>

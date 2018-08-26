@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                style="@style/details_layout_key"
+                android:id="@+id/details_book_id_text"
+                android:text="@string/details_book_id_string" />
+
+            <TextView
+                style="@style/details_layout_value"
+                android:id="@+id/details_book_id_value"
+                tools:text="#152544" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                android:id="@+id/details_book_name_text"
+                style="@style/details_layout_key"
+                android:text="@string/details_book_name_string" />
+
+            <TextView
+                android:id="@+id/details_book_name_value"
+                style="@style/details_layout_value"
+                tools:text="Don Quijote" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                android:id="@+id/details_book_price_text"
+                style="@style/details_layout_key"
+                android:text="@string/details_book_price_string" />
+
+            <TextView
+                android:id="@+id/details_book_price_value"
+                style="@style/details_layout_value"
+                tools:text="48 $" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                android:id="@+id/details_book_quantity_text"
+                style="@style/details_layout_key"
+                android:text="@string/details_book_stock_string" />
+
+            <TextView
+                android:id="@+id/details_book_quantity_value"
+                style="@style/details_layout_value"
+                tools:text="246" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                android:id="@+id/details_book_seller_text"
+                style="@style/details_layout_key"
+                android:text="@string/details_book_supplier_string" />
+
+            <TextView
+                android:id="@+id/details_book_seller_value"
+                style="@style/details_layout_value"
+                tools:text="Bookies" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/details_layout_wrapper">
+
+            <TextView
+                android:id="@+id/details_book_contact_text"
+                style="@style/details_layout_key"
+                android:text="@string/details_book_contact_string" />
+
+            <TextView
+                android:id="@+id/details_book_contact_value"
+                style="@style/details_layout_value"
+                tools:text="555 55 65" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/details_layout_button_wrapper">
+
+            <Button
+                style="@style/details_layout_button"
+                android:id="@+id/details_button_1"
+                android:drawableLeft="@drawable/ic_expand_more"
+                android:drawableStart="@drawable/ic_expand_more"
+                android:text="@string/detail_button_text_sell"/>
+
+            <Button
+                style="@style/details_layout_button"
+                android:id="@+id/details_button_2"
+                android:drawableLeft="@drawable/ic_expand_less"
+                android:drawableStart="@drawable/ic_expand_less"
+                android:text="@string/detail_button_text_add"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/details_button_3"
+            style="@style/details_layout_button"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_phone_in_talk"
+            android:drawableStart="@drawable/ic_phone_in_talk"
+            android:text="@string/details_button_3"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit_item_fab"
+        app:backgroundTint="@android:color/darker_gray"
+        app:srcCompat="@drawable/ic_mode_edit"
+        style="@style/details_layout_fab_style" />
+
+</RelativeLayout>

@@ -1,7 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimaryDark">#111</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,11 +15,268 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="def_element_style">
-        <item name="android:layout_marginTop">@dimen/text_view_margin_v</item>
-        <item name="android:layout_marginRight">@dimen/text_view_margin_h</item>
-        <item name="android:layout_marginLeft">@dimen/text_view_margin_h</item>
+        <item name="android:paddingTop">@dimen/text_view_margin_v</item>
+        <item name="android:paddingBottom">@dimen/text_view_margin_v</item>
+        <item name="android:paddingRight">@dimen/text_view_margin_h</item>
+        <item name="android:paddingLeft">@dimen/text_view_margin_h</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="inventory_item_wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/inventory_item_background</item>
+    </style>
+
+    <style name="inventory_top_item_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="inventory_header_wrapper">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:paddingLeft">@dimen/item_text_wrapper_layout_padding_h</item>
+        <item name="android:paddingRight">@dimen/item_text_wrapper_layout_padding_h</item>
+        <item name="android:paddingTop">@dimen/item_text_wrapper_layout_padding_v</item>
+        <item name="android:paddingBottom">@dimen/item_text_wrapper_layout_padding_v</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="inventory_item_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/inventory_item_head_text_size</item>
+    </style>
+
+    <style name="inventory_item_id">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/id_text_color</item>
+        <item name="android:textSize">@dimen/inventory_item_head_text_size</item>
+    </style>
+
+    <style name="inventory_item_price">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="inventory_item_bottom_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned">false</item>
+    </style>
+
+    <style name="inventory_item_supplier">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/item_text_wrapper_layout_padding_h</item>
+        <item name="android:paddingRight">@dimen/item_text_wrapper_layout_padding_h</item>
+        <item name="android:paddingTop">@dimen/item_text_wrapper_layout_padding_v</item>
+        <item name="android:paddingBottom">@dimen/item_text_wrapper_layout_padding_v</item>
+    </style>
+
+    <style name="inventory_item_supplier_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="inventory_item_supplier_contact">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="inventory_item_quantity_container">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="inventory_item_quantity_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="inventory_item_quantity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edit_item_l_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@dimen/edit_item_layout_padding_h</item>
+        <item name="android:paddingLeft">@dimen/edit_item_layout_padding_h</item>
+        <item name="android:layout_marginTop">@dimen/edit_item_layout_padding_v</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="edit_item_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="edit_item_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="inventory_app_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentEnd" tools:targetApi="jelly_bean_mr1">true</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="details_layout_wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/details_info_layout</item>
+    </style>
+
+    <style name="details_layout_key">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:padding">@dimen/details_info_layout</item>
+    </style>
+
+    <style name="details_layout_value">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">6</item>
+        <item name="android:padding">@dimen/details_info_layout</item>
+    </style>
+
+    <style name="details_layout_button_wrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">48dp</item>
+    </style>
+
+    <style name="details_layout_button" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">12dp</item>
+    </style>
+
+    <style name="details_layout_fab_style">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentEnd" tools:ignore="NewApi">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">16dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <style name="detail_layout_h_constraint_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="details_layout_key_h" parent="details_layout_key">
+        <item name="android:layout_width">105dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="details_layout_value_h" parent="details_layout_value">
+        <item name="android:layout_width">296dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="detail_layout_sell_button_h">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:drawableLeft">@drawable/ic_expand_more</item>
+        <item name="android:drawableStart">@drawable/ic_expand_more</item>
+    </style>
+
+    <style name="details_layout_call_button_h" parent="details_layout_button">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:drawableLeft">@drawable/ic_phone_in_talk</item>
+        <item name="android:drawableStart">@drawable/ic_phone_in_talk</item>
+    </style>
+
+    <style name="button_guide">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="details_layout_fab_style_h" parent="details_layout_fab_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">16dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+    </style>
+
+    <style name="detail_layout_add_button_h">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:drawableLeft">@drawable/ic_expand_less</item>
+        <item name="android:drawableStart">@drawable/ic_expand_less</item>
     </style>
 
 </resources>

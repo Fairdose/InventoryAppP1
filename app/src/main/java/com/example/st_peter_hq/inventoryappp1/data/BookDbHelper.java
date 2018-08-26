@@ -1,5 +1,6 @@
 package com.example.st_peter_hq.inventoryappp1.data;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -15,6 +16,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    @SuppressLint("SQLiteString")
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Define the SQL statement
@@ -24,8 +26,8 @@ public class BookDbHelper extends SQLiteOpenHelper {
                 + BookEntry.BOOK_NAME + " STRING NOT NULL, "
                 + BookEntry.BOOK_PRICE + " INTEGER NOT NULL DEFAULT 0, "
                 + BookEntry.BOOK_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "
-                + BookEntry.SUPPLIER + " STRING NOT NULL DEFAULT \"Anonymous\", "
-                + BookEntry.SUPPLIER_CONTACT + " STRING);";
+                + BookEntry.SUPPLIER + " STRING , "
+                + BookEntry.SUPPLIER_CONTACT + " STRING NOT NULL DEFAULT \"000-00-00\");";
 
         db.execSQL(SQL_CREATE_INVENTORY_TABLE);
     }
